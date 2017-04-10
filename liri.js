@@ -13,8 +13,8 @@ let query = process.argv.splice(3).join('+');
 //switch function reads user commands and executes the corresponding function
 switch (command) {
 
-	case "my-tweets":
-	tweet.myTweets();
+	case "evil-tweets":
+	tweet.evilTweets();
 	break;
 
 	case "spotify-this-song":
@@ -47,8 +47,8 @@ function whatever() {
 		//switch function reads user commands and executes the corresponding function
 		switch (command) {
 
-			case "my-tweets":
-			tweet.myTweets();
+			case "evil-tweets":
+			tweet.evilTweets();
 			break;
 
 			case "spotify-this-song":
