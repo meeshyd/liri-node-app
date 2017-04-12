@@ -32,7 +32,7 @@ function movieThis(query) {
 							"Plot: " + movieJSON.Plot  + "\n" + 
 							"Actors: " + movieJSON.Actors  + "\n" + 
 							"Rotten Tomatoes Rating: " + movieJSON.Ratings[1].Value  + "\n" + 
-							"Rotten Tomatoes URL: " + movieJSON.tomatoURL + "\n\n" ;
+							"Rotten Tomatoes URL: " + movieJSON.tomatoURL + "\n\n"+
 							"-------------------------------------------------" + "\n";
 			//log information to the terminal
 			console.log(movieInfo);
