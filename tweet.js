@@ -1,7 +1,8 @@
 
-//twitter package + js file with twitter keys
+//twitter package + js file with twitter keys + fs
 const Twitter = require("twitter");
 const keys = require("./keys");
+const fs = require("fs"); 
 
 const evilTweets = function() {
 	//twitter keys from keys.js
@@ -12,7 +13,7 @@ const evilTweets = function() {
 	 	"access_token_secret": keys.twitterKeys.access_token_secret
 	});
 	
-	//twitter parameters: assigned the username(I don't personally use twitter) and limited search results to 20 tweets
+	//twitter parameters: assigned a username and limited search results to 20 tweets
 	const params = {
 		screen_name: 'Lord_Voldemort7',
 		count: 20
@@ -25,8 +26,18 @@ const evilTweets = function() {
 		}
 		//loop through results and pretty print to console
 			for (let key in tweets) {
-				console.log("-------------------------------------------------\n\nLORD VOLDEMORT TWEETED ON " + tweets[key].created_at + "\n\n" + tweets[key].text + "\n\n" + "-------------------------------------------------");
-			}
+				var tweetData = "-------------------------------------------------\n\n" +
+								"LORD VOLDEMORT TWEETED ON " + tweets[key].created_at + "\n\n" + 
+								tweets[key].text + "\n\n" ;
+			
+			console.log(tweetData);
+
+			fs.appendFile("log.txt", tweetData + "\n\n", function(err){
+        		if(err) {
+        			return;
+   				 }
+        	});
+		};
 	});
 };
 //export myTweets function to be called within liri.js
