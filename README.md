@@ -4,7 +4,7 @@
 
 LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.
 
-To use LIRI you will need to make a JavaScript file named `keys.js`. Inside `keys.js` your file shoul look like this:
+To use LIRI you will need to make a JavaScript file named `keys.js`. Inside `keys.js`, your file should look like this:
 
 ```JavaScript
 
